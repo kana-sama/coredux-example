@@ -1,0 +1,23 @@
+{
+  "name": "coredux-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "babel-node ./src/index.js"
+  },
+  "author": "kana-sama",
+  "license": "MIT",
+  "dependencies": {
+    "coredux": "^1.0.0",
+    "ramda": "^0.25.0",
+    "redux": "^3.7.2",
+    "reselect": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "prettier": "^1.10.2"
+  }
+}
