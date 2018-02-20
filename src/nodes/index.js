@@ -1,8 +1,6 @@
 import { combineNodes, createQuery } from "coredux";
 import { createSelector } from "reselect";
 
-import { denormalize } from "../utils";
-
 import { comments, getCommentsEntities } from "./comments";
 import { posts, getPosts } from "./posts";
 
@@ -18,7 +16,7 @@ export const root = combineNodes({
     (posts, commentsById) =>
       posts.map(post => ({
         ...post,
-        comments: denormalize(commentsById, post.commentsIds),
+        comments: post.commentsIds.map(id => commentsById.get(id)),
       }))
   )
 );
